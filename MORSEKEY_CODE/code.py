@@ -463,9 +463,10 @@ character_display.anchored_position = (64, 49)
 # 모스부호 패턴 및 타이머
 morse_pattern = ""
 last_input_time = time.monotonic()
+enter_with_pattern = False
+space_pressed = False
+enter_via_space = False
 
-# 문자 버퍼 (엔터키로 단어 완성용)
-character_buffer = ""
 
 # 부저 상태 관리 / Buzzer state management
 buzzer_start_time = 0
@@ -487,7 +488,7 @@ encoder2_last_clk = encoder2_last_data = True
 encoder2_debounce_time = 0
 encoder2_clk_samples = [True] * 5
 encoder2_data_samples = [True] * 5
-encoder2_sample_idx = 0  # 순환 버퍼 인덱스
+encoder2_sample_idx = 0  # 순환 버5퍼 인덱스
 
 # 모스부호 입력 상태 / Morse input state
 dot_pressed = False
@@ -519,8 +520,8 @@ switch_times = {
     'save': {'value': 0}
 }
 
-# 동시 누름 감지 / Simultaneous press detection
-both_pressed = False
+# 동시 누름 감지 / Simultaneous press detection (비활성화)
+# both_pressed = False
 
 # 언어 및 모드 상태 / Language and mode state
 current_lang = "EN"
@@ -564,6 +565,7 @@ temp_ats = 0
 # 저장 상태 / Save state
 save_done_time = 0
 save_fail_time = 0
+default_done_time = 0
 
 
 # 모스부호 설정값 / Morse settings values
@@ -629,11 +631,11 @@ keyboard = Keyboard(usb_hid.devices)
 # 스위치 핀 초기화
 # =============================================================================
 enter_button = setup_input_pin(digitalio.DigitalInOut(board.GP28))
-backspace_button = setup_input_pin(digitalio.DigitalInOut(board.GP26))
+backspace_button = setup_input_pin(digitalio.DigitalInOut(board.A3))
 lang_switch = setup_input_pin(digitalio.DigitalInOut(board.GP13))
 hangul_switch = setup_input_pin(digitalio.DigitalInOut(board.GP27))
 macro_switch = setup_input_pin(digitalio.DigitalInOut(board.GP12))
-caps_switch = setup_input_pin(digitalio.DigitalInOut(board.A3))
+caps_switch = setup_input_pin(digitalio.DigitalInOut(board.GP26))
 save_switch = setup_input_pin(digitalio.DigitalInOut(board.GP9))
 menu_switch = setup_input_pin(digitalio.DigitalInOut(board.GP10))
 ats_toggle_switch = setup_input_pin(digitalio.DigitalInOut(board.GP11))
@@ -1107,6 +1109,13 @@ def update_menu_display():
                     menu_labels[i].text = "SAVE : FAIL"
                 else:
                     menu_labels[i].text = "SAVE :"
+            # DEFAULT 표시
+            elif item_text == "DEFAULT":
+                current_time = time.monotonic()
+                if default_done_time > 0 and current_time - default_done_time < 3.0:  # 3초간 DONE 표시
+                    menu_labels[i].text = "DEFAULT: DONE"
+                else:
+                    menu_labels[i].text = "DEFAULT:"
             else:
                 menu_labels[i].text = item_text
         else:
@@ -1142,6 +1151,10 @@ def hide_menu():
     # 화면 복원
     display.root_group = splash
     menu_visible = False
+    
+    # character_display가 splash에 없으면 추가
+    if character_display not in splash:
+        splash.append(character_display)
 
 
 def read_menu_encoder():
@@ -1170,19 +1183,19 @@ def read_menu_encoder():
                     update_buzzer_settings(realtime=True)
                     update_menu_display()
         elif ats_adjust_mode:
-            # AT-S 조정 (OFF 옵션 제거, 최소 100ms)
+            # AT-S 조정 (OFF 옵션 제거, 최소 25ms)
             if direction == 1:  # 반시계방향 (증가)
                 if temp_ats < 2000:
-                    temp_ats += 100
+                    temp_ats += 25
                     temp_ats = min(2000, temp_ats)
                     ats_value = temp_ats
                     ats_previous_value = temp_ats  # 이전 값도 업데이트
                     update_menu_display()
                     update_ats_status_display()  # AT-S 상태 표시 업데이트
             else:  # 시계방향 (감소)
-                if temp_ats > 100:
-                    temp_ats -= 100
-                    temp_ats = max(100, temp_ats)
+                if temp_ats > 25:
+                    temp_ats -= 25
+                    temp_ats = max(25, temp_ats)
                     ats_value = temp_ats
                     ats_previous_value = temp_ats  # 이전 값도 업데이트
                     update_menu_display()
@@ -1302,13 +1315,13 @@ def show_ats_setting():
     """AT-S 설정 화면 표시 - HZ처럼 SET 모드"""
     global ats_adjust_mode, temp_ats
     ats_adjust_mode = True
-    temp_ats = max(100, ats_value)  # 최소 100ms로 설정
+    temp_ats = max(25, ats_value)  # 최소 25ms로 설정
     update_menu_display()  # 화면 업데이트 (AT-S : 500 SET 표시)
 
 
 def reset_to_default():
     """모든 설정을 기본값으로 리셋"""
-    global current_hz, current_vol, temp_hz, das_r_value, iwg_r_value, ats_value
+    global current_hz, current_vol, temp_hz, das_r_value, iwg_r_value, ats_value, default_done_time
     current_hz = 1000
     current_vol = VOL_LEVELS[4]  # 4단계
     temp_hz = current_hz
@@ -1317,6 +1330,9 @@ def reset_to_default():
     das_r_value = 3.0  # 기본값
     iwg_r_value = 7.0  # 기본값
     ats_value = 0      # 기본값 (OFF)
+    
+    # DONE 시간 설정
+    default_done_time = time.monotonic()
     
     update_buzzer_settings()
     calculate_intervals()  # 모스부호 간격 재계산
@@ -1355,14 +1371,37 @@ SAVED_TIME = "{time.monotonic():.0f}"
         # DONE 표시
         save_done_time = time.monotonic()
         save_fail_time = 0  # FAIL 시간 초기화
-        update_menu_display()
+        
+        # 메뉴가 열려있을 때만 메뉴 표시 업데이트
+        if menu_visible:
+            update_menu_display()
+        
+        # 화면에 SAVED 표시
+        global key_display_time, key_display_active
+        character_display.text = "[SAVED]"
+        if character_display not in splash:
+            splash.append(character_display)
+        key_display_time = time.monotonic()
+        key_display_active = True
         
         return True
     except Exception as e:
         # FAIL 표시
         save_fail_time = time.monotonic()
         save_done_time = 0  # DONE 시간 초기화
-        update_menu_display()
+        
+        # 메뉴가 열려있을 때만 메뉴 표시 업데이트
+        if menu_visible:
+            update_menu_display()
+        
+        # 화면에 FAILED 표시
+        global key_display_time, key_display_active
+        character_display.text = "[FAILED]"
+        if character_display not in splash:
+            splash.append(character_display)
+        key_display_time = time.monotonic()
+        key_display_active = True
+        
         return False
 
 def handle_menu_switch():
@@ -1391,14 +1430,14 @@ def update_progress_bar(progress_type):
     global wpm_progress_lines, wpm_last_progress, iwg_progress_lines, iwg_last_progress, wpm, iwg
     
     if progress_type == "wpm":
-        # WPM 범위 변환 (5-50 -> 0-28)
-        progress_width = max(0, min(28, int((wpm - 5) * 28 / 45)))
+        # WPM 범위 변환 (5-30 -> 0-28)
+        progress_width = max(0, min(28, int((wpm - 5) * 28 / 25)))
         start_x = 20
         progress_lines = wpm_progress_lines
         last_progress = wpm_last_progress
     else:  # iwg
-        # IWG 범위 변환 (-99~99 -> 0-20)
-        progress_width = max(0, min(20, int((iwg + 99) * 20 / 198)))
+        # IWG 범위 변환 (-40~40 -> 0-20)
+        progress_width = max(0, min(20, int((iwg + 40) * 20 / 80)))
         start_x = 87
         progress_lines = iwg_progress_lines
         last_progress = iwg_last_progress
@@ -1455,18 +1494,13 @@ def handle_direct_mode_signal(signal):
     start_direct_mode_timer(signal)
 
 def send_enter_key():
-    # 엔터키 처리
-    global morse_pattern, last_input_time
-    
-    # 모스 패턴이 있는 경우
+    global morse_pattern, last_input_time, enter_with_pattern, space_pressed, enter_via_space
     if morse_pattern:
-        # 일반 문자로 변환
         if is_valid_pattern_for_mode(morse_pattern, current_lang):
             character = morse_dict[morse_pattern]
             if current_lang == "KR":
                 char_code = ord(character)
                 if 0x3131 <= char_code <= 0x3163:
-                    # 캡스락시 된소리로
                     display_character = character
                     if caps_lock_state and character in CAPS_CONVERSION_MAP:
                         display_character = CAPS_CONVERSION_MAP[character]
@@ -1483,15 +1517,15 @@ def send_enter_key():
         else:
             create_character_display(f"?({current_lang})")
         
-        # 패턴 초기화
         morse_pattern = ""
         morse_display.text = ""
         display.refresh()
-        show_key_action(character)  # 변환된 문자를 표시
+        show_key_action(character)
+        enter_with_pattern = True
+        space_pressed = True
     else:
-        # 스페이스키 동작 (2번째 엔터는 스페이스로 변경)
-        press_release(Keycode.SPACE)
-        show_key_action("SPACE")
+        enter_with_pattern = False
+        space_pressed = True
 
 def send_backspace_key():
     press_release(Keycode.BACKSPACE)
@@ -1500,6 +1534,17 @@ def send_backspace_key():
 def send_space_key():
     press_release(Keycode.SPACE)
     show_key_action(STR_SPACE)
+
+def handle_enter_release():
+    global enter_with_pattern, space_pressed, enter_via_space
+    space_pressed = False
+    if enter_via_space:
+        enter_via_space = False
+        return
+    if not enter_with_pattern:
+        press_release(Keycode.SPACE)
+        show_key_action("SPACE")
+
 
 def send_hangul_key():
     press_release(Keycode.RIGHT_ALT)
@@ -2001,7 +2046,7 @@ def wpm_callback(direction):
     """WPM 엔코더 콜백"""
     global wpm
     if direction == 1:  # 반시계방향 (증가)
-        if wpm < 50:
+        if wpm < 30:
             wpm += 1
             update_wpm_display()
             calculate_intervals()
@@ -2015,18 +2060,18 @@ def iwg_callback(direction):
     """IWG 엔코더 콜백"""
     global iwg
     if direction == 1:  # 반시계방향 (증가)
-        if iwg < 99:
+        if iwg < 40:
             iwg += 1
             update_iwg_display()
             calculate_intervals()
     else:  # 시계방향 (감소)
-        if iwg > -99:
+        if iwg > -40:
             iwg -= 1
             update_iwg_display()
             calculate_intervals()
 
 def handle_switch(pin, pressed_state, last_press_time, action_func, name, 
-                  inverted=False, repeat_action=None, repeat_delay=1.0, repeat_interval=0.1):
+                  inverted=False, repeat_action=None, repeat_delay=1.0, repeat_interval=0.1, release_action=None):
     """통합 스위치 처리 함수"""
     current_time = time.monotonic()
     
@@ -2049,6 +2094,9 @@ def handle_switch(pin, pressed_state, last_press_time, action_func, name,
     else:
         if pressed_state['value']:
             pressed_state['value'] = False
+            # 스위치를 떼는 순간에 release_action 실행
+            if release_action:
+                release_action()
 
 def handle_hangul_switch():
     """한영 변환 스위치 전용 처리 (키 입력 + 언어 전환)"""
@@ -2156,12 +2204,10 @@ def handle_morse_conversion():
     if is_valid_pattern_for_mode(morse_pattern, current_lang):
         character = morse_dict[morse_pattern]
         
-        # 특수문자/구두점/숫자인지 확인
+        # 특수문자/구두점인지 확인 (숫자는 AT-S 적용)
         char_code = ord(character)
         is_special_char = (
-            # 숫자 (0-9)
-            48 <= char_code <= 57 or
-            # 구두점 및 특수문자
+            # 구두점 및 특수문자 (숫자 제외)
             char_code in [46, 44, 63, 33, 45, 47, 40, 41, 61, 43, 58, 59, 34, 39, 95, 36, 64] or
             # 한글 특수문자 (한글 모드에서)
             (current_lang == "KR" and char_code in [0x3131, 0x3132, 0x3133, 0x3134, 0x3135, 0x3136, 0x3137, 0x3138, 0x3139, 0x313A, 0x313B, 0x313C, 0x313D, 0x313E, 0x313F, 0x3140, 0x3141, 0x3142, 0x3143, 0x3144, 0x3145, 0x3146, 0x3147, 0x3148, 0x3149, 0x314A, 0x314B, 0x314C, 0x314D, 0x314E, 0x314F, 0x3150, 0x3151, 0x3152, 0x3153, 0x3154, 0x3155, 0x3156, 0x3157, 0x3158, 0x3159, 0x315A, 0x315B, 0x315C, 0x315D, 0x315E, 0x315F, 0x3160, 0x3161, 0x3162, 0x3163])
@@ -2184,7 +2230,7 @@ def handle_morse_conversion():
             create_character_display(display_text)
             send_character_to_keyboard(display_text)
         
-        # 특수문자/구두점/숫자가 아닌 경우에만 AT-S 타이머 시작
+        # 특수문자/구두점이 아닌 경우에만 AT-S 타이머 시작 (숫자는 AT-S 적용)
         if not is_special_char:
             finish_morse_conversion()
         else:
@@ -2222,9 +2268,9 @@ def handle_morse_input():
     current_time = time.monotonic()
     test_mode = menu_visible  # 메뉴가 열려있을 때는 테스트 모드
     
-    # 동시 누름 처리
-    if _handle_simultaneous_press(test_mode):
-        return True
+    # 동시 누름 처리 (비활성화)
+    # if _handle_simultaneous_press(test_mode):
+    #     return True
     
     # 새로운 입력 및 교차 입력 처리
     if _handle_new_inputs(current_time, test_mode):
@@ -2237,28 +2283,8 @@ def handle_morse_input():
     return False
 
 def _handle_simultaneous_press(test_mode):
-    """동시 누름 처리"""
-    global both_pressed, dot_pressed, line_pressed
-    
-    if not switch_dot.value and not switch_line.value:
-        if not both_pressed:
-            both_pressed = True
-            reset_morse_pattern()
-            stop_morse_signal()
-            if not direct_morse_mode and not test_mode:
-                press_release(Keycode.ENTER)
-                show_key_action(STR_ENTER)
-        dot_pressed = True
-        line_pressed = True
-        return True
-    else:
-        if both_pressed:
-            if switch_dot.value and switch_line.value:
-                both_pressed = False
-                dot_pressed = False
-                line_pressed = False
-            else:
-                return True
+    """동시 누름 처리 (비활성화)"""
+    # 동시 누름 기능이 비활성화됨
     return False
 
 def _handle_new_inputs(current_time, test_mode):
@@ -2348,20 +2374,25 @@ def _process_signal(signal, test_mode):
             display.refresh()
 
 def add_morse_signal(signal):
-    """모스부호 신호를 패턴에 추가"""
-    global morse_pattern, last_input_time, last_activity_time, ats_timer_active
-    
-    # 새로운 모스 신호 입력 시 AT-S 타이머 취소
+    global morse_pattern, last_input_time, last_activity_time, ats_timer_active, enter_with_pattern, space_pressed, enter_via_space
     if ats_timer_active:
         ats_timer_active = False
         led.value = False  # AT-S 타이머 취소 시 LED 끄기
         clear_ats_progress_bars()  # AT-S 진행바 제거
     
     if len(morse_pattern) < 20:
+        if space_pressed:
+            press_release(Keycode.ENTER)
+            show_key_action("ENTER")
+            enter_via_space = True
+            return
+        
         morse_pattern += signal
         morse_display.text = morse_pattern
         if morse_display not in splash:
             splash.append(morse_display)
+        enter_with_pattern = False
+        enter_via_space = False
         
         current_time = time.monotonic()
         total_timer = calculate_signal_timer(signal)
@@ -2430,7 +2461,7 @@ while True:
     
         # 3. 스위치 입력 처리
         handle_switch(enter_button, switch_states['enter'], switch_times['enter'], 
-                      send_enter_key, "엔터 버튼")
+                      send_enter_key, "엔터 버튼", release_action=handle_enter_release)
         
         handle_switch(backspace_button, switch_states['backspace'], switch_times['backspace'], 
                       send_backspace_key, "백스페이스 버튼", repeat_action=send_backspace_key, 
@@ -2449,7 +2480,7 @@ while True:
                       send_caps_lock_key, "CAPS LOCK 스위치")
         
         handle_switch(save_switch, switch_states['save'], switch_times['save'], 
-                      save_settings, "저장 스위치")
+                      save_all_settings, "저장 스위치")
         
         handle_menu_switch()
     
