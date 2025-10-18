@@ -1,0 +1,228 @@
+{
+  "menu": {
+    "file": "File",
+    "edit": "Edit",
+    "settings": "Settings",
+    "help": "Help",
+    "info": "Information"
+  },
+  "file_menu": {
+    "new": "New",
+    "open": "Open",
+    "save": "Save",
+    "save_as": "Save As",
+    "exit": "Exit"
+  },
+  "edit_menu": {
+    "undo": "Undo",
+    "redo": "Redo",
+    "copy": "Copy",
+    "paste": "Paste"
+  },
+  "settings_menu": {
+    "device": "Device Settings",
+    "macro": "Macro Settings",
+    "preferences": "Preferences",
+    "sort_macros": "Sort List"
+  },
+  "info_menu": {
+    "about": "About",
+    "key_info": "MORSEKEY Input Keys",
+    "upload_method": "Upload Method",
+    "morse_pattern": "Morse Code Pattern"
+  },
+  "about": {
+    "title": "Information",
+    "program": "MORSEKEY Macro Editor v1.0.0",
+    "version": "",
+    "author": "This program is a macro editing and management program for MORSEKEY-A01 devices developed by Airmodeling.",
+    "description": "A Windows application that provides JSON-based simple macro editing and preview functionality.",
+    "usage_title": "Usage",
+    "usage_text": "After editing is complete, connect the MORSEKEY-A01 to boot mode and upload the macro.json file to the device's file path to apply.",
+    "purpose_title": "",
+    "purpose_text": "",
+    "license_title": "License",
+    "license_text": "This program can be freely used for personal and educational purposes.\nHowever, modification, redistribution, and commercial use are prohibited, and all responsibility for use lies with the user.",
+    "requirements_title": "System Requirements",
+    "requirements_text": "Operating System: Windows 10 or higher\nDevice: MORSEKEY-A01\nPython 3.10 or higher (required when using script features)",
+    "contact_title": "Contact",
+    "contact_text": "Email: airmodel00@gmail.com\nYouTube: AIRMODELING Channel\n© 2025 Airmodeling. All rights reserved."
+  },
+  "buttons": {
+    "new_macro": "New Macro",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "load": "Load",
+    "upload": "Upload",
+    "connect": "Connect",
+    "auto_connect": "Auto Connect",
+    "apply": "Apply",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "convert": "Convert"
+  },
+  "macro_dialog": {
+    "title_new": "New Macro Settings",
+    "title_edit": "Edit Macro",
+    "screen_char": "Screen Character",
+    "language_mode": "Language Mode",
+    "morse_pattern": "Morse Pattern",
+    "output_char": "Output Character",
+    "input_char": "Input Character",
+    "morse_code": "Morse Code",
+    "placeholder_screen": "New Character",
+    "placeholder_output": "New Character",
+    "placeholder_input": "New Character",
+    "placeholder_morse": "Morse code will be displayed automatically",
+    "info_oled": "※ For OLED output (English input only)",
+    "info_keyboard": "※ Actual keyboard input character"
+  },
+  "settings": {
+    "title": "Preferences",
+    "language": "Environment Language",
+    "language_label": "Select Language",
+    "path_display": "Custom Save Path",
+    "auto_load": "Auto Load",
+    "apply": "Apply",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "default": "Default",
+    "yes": "Yes",
+    "no": "No",
+    "restart_title": "Restart Program",
+    "restart_message": "Language settings have been changed.\nDo you want to restart the program?"
+  },
+  "file_info": {
+    "no_file": "Current File: None",
+    "current_file": "Current File: {filename}"
+  },
+  "unsaved_changes": {
+    "title": "Unsaved Changes",
+    "message": "You have unsaved changes.\nDo you want to save?",
+    "yes": "Yes",
+    "no": "No",
+    "cancel": "Cancel"
+  },
+  "errors": {
+    "input_required": " is required.",
+    "duplicate": "Output character or morse code is duplicated.",
+    "duplicate_morse": "⚠️ Duplicate morse code found: ",
+    "select_macro": "Please select a macro to edit.",
+    "select_single_item": "Please select only one item"
+  },
+  "messages": {
+    "macro_added": "New macro added",
+    "macro_edited": "Macro edited",
+    "macro_deleted": "Macro deleted",
+    "macro_already_applied": "Already applied macro - verification only",
+    "macro_preview_applied": "Macro edit preview applied",
+    "macro_applied": "Macro applied successfully",
+    "conversion_complete": "Conversion complete",
+    "active_radio_selected": "Active radio button selected",
+    "inactive_radio_selected": "Inactive radio button selected",
+    "delete_confirm": "Do you want to delete {count} selected macros?",
+    "save_complete": "Save Complete",
+    "save_success": "File saved successfully:",
+    "file_save_complete": "File save complete",
+    "settings_saved": "Settings saved",
+    "settings_cancelled": "Settings cancelled",
+    "file_new": "Create new file",
+    "file_open": "Open file",
+    "file_save": "Save file",
+    "auto_connect_attempt": "Auto connect attempt: Automatically searching for available ports"
+  },
+  "table": {
+    "number": "No.",
+    "screen_char": "Screen",
+    "input_char": "Input",
+    "morse": "Morse",
+    "output_char": "Output",
+    "language": "LANG",
+    "status": "Status"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "connection": {
+    "connected": "Status: Connected",
+    "disconnected": "Status: Disconnected"
+  },
+  "app_title": "MORSEKEY Macro Editor",
+  "main_label": "Macro Editor v1.0",
+  "macro_list": {
+    "title": "Macro List",
+    "status_display": "Status: Macro list is displayed"
+  },
+  "device_connection": {
+    "title": "Device Connection",
+    "port": "Port:",
+    "speed": "Speed:",
+    "connect_attempt": "Device connection attempt: Port={port}, Speed={speed}"
+  },
+  "info": {
+    "title": "Information",
+    "warning": "Warning",
+    "error": "Error",
+    "success": "Success",
+    "show_buttons": "Show Buttons",
+    "hide_buttons": "Hide Buttons"
+  },
+  "upload": {
+    "waiting": "Upload: Waiting",
+    "progress": "Upload: In Progress...",
+    "complete": "Upload: Complete"
+  },
+  "macro_status": {
+    "none_selected": "Status: No macros selected",
+    "all_selected": "Status: All macros selected",
+    "partial_selected": "Status: {count} macros selected (Total {total})"
+  },
+  "placeholders": {
+    "screen_char": "Enter character to display on screen",
+    "output_char": "Enter character to output",
+    "input_char": "Enter character to convert",
+    "morse_pattern": "Enter morse pattern",
+    "morse_auto": "Morse code will be displayed automatically",
+    "search": "Search macros..."
+  },
+  "search": {
+    "label": "Search:",
+    "placeholder": "Search screen/input/morse/output (e.g., s a c - show items containing any)",
+    "screen": "Screen",
+    "input_char": "Input",
+    "morse": "Morse",
+    "output_char": "Output"
+  },
+  "key_info": {
+    "title": "MORSEKEY Input Keys",
+    "window_title": "MORSEKEY Input Keys",
+    "description": "SYNS     : Morse code language setting switch\nMACRO    : Auto sentence input switch\nAT-S     : Auto space input switch\nDot·Dash simultaneous input : Enter key input"
+  },
+  "morse_info": {
+    "title": "Morse Code Pattern",
+    "window_title": "Morse Code Pattern",
+    "description": "Uppercase and lowercase letters are distinguished according to CAPS LOCK status."
+  },
+  "morse_pages": {
+    "english": "English Alphabet",
+    "korean": "Korean Consonants/Vowels",
+    "numbers": "Numbers",
+    "special": "Special Characters"
+  },
+  "upload_info": {
+    "title": "MACRO Upload Method",
+    "window_title": "MACRO Upload Method",
+    "description": "1. Press the reset button.\n2. After pressing reset, press KEY-1 and KEY-3 simultaneously.\n3. After a moment, it will automatically connect to edit mode in Windows.\n4. After uploading the MACRO file, press the reset button to apply the changes."
+  },
+  "labels": {
+    "reset_button": "Reset Button",
+    "key_buttons": "KEY-1, KEY-3 Buttons"
+  },
+  "messages": {
+    "image_not_found": "Image file not found.",
+    "image_load_failed": "Unable to load image.",
+    "image_load_error": "Image load error: {error}"
+  }
+}

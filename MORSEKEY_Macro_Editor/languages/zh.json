@@ -1,0 +1,228 @@
+{
+  "menu": {
+    "file": "文件",
+    "edit": "编辑",
+    "settings": "设置",
+    "help": "帮助",
+    "info": "信息"
+  },
+  "file_menu": {
+    "new": "新建",
+    "open": "打开",
+    "save": "保存",
+    "save_as": "另存为",
+    "exit": "退出"
+  },
+  "edit_menu": {
+    "undo": "撤销",
+    "redo": "重做",
+    "copy": "复制",
+    "paste": "粘贴"
+  },
+  "settings_menu": {
+    "device": "设备设置",
+    "macro": "宏设置",
+    "preferences": "首选项",
+    "sort_macros": "列表排序"
+  },
+  "info_menu": {
+    "about": "信息",
+    "key_info": "MORSEKEY输入键",
+    "upload_method": "上传方法",
+    "morse_pattern": "摩尔斯码模式"
+  },
+  "about": {
+    "title": "信息",
+    "program": "MORSEKEY 宏编辑器 v1.0.0",
+    "version": "",
+    "author": "此程序是由Airmodeling开发的MORSEKEY-A01设备专用宏编辑和管理程序。",
+    "description": "Windows应用程序，提供基于JSON的简单宏编辑和预览功能。",
+    "usage_title": "使用方法",
+    "usage_text": "编辑完成的macro.json文件，将MORSEKEY-A01连接到启动模式后，\n上传到设备的文件路径即可应用。",
+    "purpose_title": "",
+    "purpose_text": "",
+    "license_title": "许可证",
+    "license_text": "此程序可自由用于个人和教育目的。\n但禁止修改、重新分发和商业使用，使用产生的所有责任由用户承担。",
+    "requirements_title": "系统要求",
+    "requirements_text": "操作系统: Windows 10或更高版本\n设备: MORSEKEY-A01\nPython 3.10或更高版本 (使用脚本功能时需要)",
+    "contact_title": "联系",
+    "contact_text": "邮箱: airmodel00@gmail.com\nYouTube: AIRMODELING频道\n© 2025 Airmodeling. All rights reserved."
+  },
+  "buttons": {
+    "new_macro": "新建宏",
+    "edit": "编辑",
+    "delete": "删除",
+    "save": "保存",
+    "load": "加载",
+    "upload": "上传",
+    "connect": "连接",
+    "auto_connect": "自动连接",
+    "apply": "应用",
+    "confirm": "确认",
+    "cancel": "取消",
+    "convert": "转换"
+  },
+  "macro_dialog": {
+    "title_new": "新建宏设置",
+    "title_edit": "编辑宏",
+    "screen_char": "屏幕字符",
+    "language_mode": "语言模式",
+    "morse_pattern": "摩尔斯模式",
+    "output_char": "输出字符",
+    "input_char": "输入字符",
+    "morse_code": "摩尔斯码",
+    "placeholder_screen": "新字符",
+    "placeholder_output": "新字符",
+    "placeholder_input": "新字符",
+    "placeholder_morse": "摩尔斯码将自动显示",
+    "info_oled": "※ 用于OLED输出（仅英文输入）",
+    "info_keyboard": "※ 实际键盘输入字符"
+  },
+  "settings": {
+    "title": "首选项",
+    "language": "环境语言",
+    "language_label": "选择语言",
+    "path_display": "自定义保存路径",
+    "auto_load": "自动加载",
+    "apply": "应用",
+    "confirm": "确认",
+    "cancel": "取消",
+    "default": "默认",
+    "yes": "是",
+    "no": "否",
+    "restart_title": "重启程序",
+    "restart_message": "语言设置已更改。\n您要重启程序吗？"
+  },
+  "file_info": {
+    "no_file": "当前文件: 无",
+    "current_file": "当前文件: {filename}"
+  },
+  "unsaved_changes": {
+    "title": "未保存的更改",
+    "message": "您有未保存的更改。\n是否要保存？",
+    "yes": "是",
+    "no": "否",
+    "cancel": "取消"
+  },
+  "errors": {
+    "input_required": "需要输入。",
+    "duplicate": "输出字符或摩尔斯码重复。",
+    "duplicate_morse": "⚠️ 发现重复的摩尔斯码: ",
+    "select_macro": "请选择要编辑的宏。",
+    "select_single_item": "请只选择一个项目"
+  },
+  "messages": {
+    "macro_added": "新建宏",
+    "macro_edited": "宏编辑完成",
+    "macro_deleted": "宏删除",
+    "macro_already_applied": "已应用宏 - 仅验证",
+    "macro_preview_applied": "宏编辑预览已应用",
+    "macro_applied": "宏应用完成",
+    "conversion_complete": "转换完成",
+    "active_radio_selected": "激活单选按钮选择",
+    "inactive_radio_selected": "未激活单选按钮选择",
+    "delete_confirm": "是否要删除选中的{count}个宏？",
+    "save_complete": "保存完成",
+    "save_success": "文件已成功保存:",
+    "file_save_complete": "文件保存完成",
+    "settings_saved": "设置已保存",
+    "settings_cancelled": "设置已取消",
+    "file_new": "创建新文件",
+    "file_open": "打开文件",
+    "file_save": "保存文件",
+    "auto_connect_attempt": "自动连接尝试: 自动搜索可用端口"
+  },
+  "table": {
+    "number": "编号",
+    "screen_char": "屏幕",
+    "input_char": "输入",
+    "morse": "摩尔斯",
+    "output_char": "输出",
+    "language": "语言",
+    "status": "状态"
+  },
+  "status": {
+    "active": "激活",
+    "inactive": "未激活"
+  },
+  "connection": {
+    "connected": "状态: 已连接",
+    "disconnected": "状态: 未连接"
+  },
+  "app_title": "MORSEKEY 宏编辑器",
+  "main_label": "宏编辑器 v1.0",
+  "macro_list": {
+    "title": "宏列表",
+    "status_display": "状态: 宏列表已显示"
+  },
+  "device_connection": {
+    "title": "设备连接",
+    "port": "端口:",
+    "speed": "速度:",
+    "connect_attempt": "设备连接尝试: 端口={port}, 速度={speed}"
+  },
+  "info": {
+    "title": "信息",
+    "warning": "警告",
+    "error": "错误",
+    "success": "成功",
+    "show_buttons": "显示按钮",
+    "hide_buttons": "隐藏按钮"
+  },
+  "upload": {
+    "waiting": "上传: 等待中",
+    "progress": "上传: 进行中...",
+    "complete": "上传: 完成"
+  },
+  "macro_status": {
+    "none_selected": "状态: 没有选择宏",
+    "all_selected": "状态: 所有宏已选择",
+    "partial_selected": "状态: 已选择 {count} 个宏 (总共 {total} 个)"
+  },
+  "placeholders": {
+    "screen_char": "请输入要显示在屏幕上的字符",
+    "output_char": "请输入要输出的字符",
+    "input_char": "请输入要转换的字符",
+    "morse_pattern": "请输入摩尔斯模式",
+    "morse_auto": "摩尔斯代码将自动显示",
+    "search": "搜索宏..."
+  },
+  "search": {
+    "label": "搜索:",
+    "placeholder": "搜索屏幕/输入/摩尔斯/输出 (例: s a c - 显示包含任意一项的项目)",
+    "screen": "屏幕",
+    "input_char": "输入",
+    "morse": "摩尔斯",
+    "output_char": "输出"
+  },
+  "key_info": {
+    "title": "MORSEKEY输入键",
+    "window_title": "MORSEKEY输入键",
+    "description": "SYNS     : 摩尔斯码语言设置开关\nMACRO    : 自动句子输入开关\nAT-S     : 自动空格输入开关\n点·线同时输入 : 回车键输入"
+  },
+  "morse_info": {
+    "title": "摩尔斯码模式",
+    "window_title": "摩尔斯码模式",
+    "description": "根据CAPS LOCK状态区分大小写字母。"
+  },
+  "morse_pages": {
+    "english": "英语字母",
+    "korean": "韩语辅音/元音",
+    "numbers": "数字",
+    "special": "特殊字符"
+  },
+  "upload_info": {
+    "title": "MACRO上传方法",
+    "window_title": "MACRO上传方法",
+    "description": "1. 请按重置按钮。\n2. 按重置后，同时按KEY-1和KEY-3。\n3. 稍后，将在Windows中自动连接到编辑模式。\n4. 上传MACRO文件后，按重置按钮将应用更改。"
+  },
+  "labels": {
+    "reset_button": "重置按钮",
+    "key_buttons": "KEY-1, KEY-3按钮"
+  },
+  "messages": {
+    "image_not_found": "找不到图像文件。",
+    "image_load_failed": "无法加载图像。",
+    "image_load_error": "图像加载错误: {error}"
+  }
+}

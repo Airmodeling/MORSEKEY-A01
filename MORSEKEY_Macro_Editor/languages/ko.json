@@ -1,0 +1,232 @@
+{
+  "menu": {
+    "file": "파일",
+    "edit": "편집",
+    "settings": "설정",
+    "help": "도움말",
+    "info": "정보"
+  },
+  "file_menu": {
+    "new": "새로 만들기",
+    "open": "열기",
+    "save": "저장하기",
+    "save_as": "다른 이름으로 저장",
+    "exit": "종료"
+  },
+  "edit_menu": {
+    "undo": "실행 취소",
+    "redo": "다시 실행",
+    "copy": "복사",
+    "paste": "붙여넣기"
+  },
+  "settings_menu": {
+    "device": "장치 설정",
+    "macro": "메크로 설정",
+    "preferences": "환경설정",
+    "sort_macros": "리스트 정렬"
+  },
+  "help_menu": {
+    "manual": "사용법",
+    "about": "정보"
+  },
+  "info_menu": {
+    "about": "정보",
+    "key_info": "MORSEKEY 입력 정보",
+    "upload_method": "업로드 방법",
+    "morse_pattern": "모스코드 패턴"
+  },
+  "buttons": {
+    "new_macro": "새 메크로",
+    "edit": "편집",
+    "delete": "삭제",
+    "save": "저장하기",
+    "load": "불러오기",
+    "upload": "업로드하기",
+    "connect": "연결",
+    "auto_connect": "자동연결",
+    "apply": "적용",
+    "confirm": "확인",
+    "cancel": "취소",
+    "convert": "변환하기"
+  },
+  "macro_dialog": {
+    "title_new": "새 메크로 설정",
+    "title_edit": "메크로 편집",
+    "screen_char": "화면 문자",
+    "language_mode": "언어 모드",
+    "morse_pattern": "모스부호 패턴",
+    "output_char": "출력 문자",
+    "input_char": "문자 입력",
+    "morse_code": "모스부호",
+    "placeholder_screen": "새 문자",
+    "placeholder_output": "새 문자",
+    "placeholder_input": "새 문자",
+    "placeholder_morse": "모스부호가 자동으로 표시됩니다",
+    "info_oled": "※ OLED 출력용 (영어 입력만 가능)",
+    "info_keyboard": "※ 실제 키보드 입력 문자"
+  },
+  "settings": {
+    "title": "환경설정",
+    "language": "환경 언어",
+    "language_label": "언어 선택",
+    "path_display": "저장경로 지정",
+    "auto_load": "자동 불러오기",
+    "apply": "적용",
+    "confirm": "확인",
+    "cancel": "취소",
+    "default": "디폴트",
+    "yes": "예",
+    "no": "아니오",
+    "restart_title": "프로그램 재시작",
+    "restart_message": "언어 설정이 변경되었습니다.\n프로그램을 재시작하시겠습니까?"
+  },
+  "file_info": {
+    "no_file": "현재 파일: 없음",
+    "current_file": "현재 파일: {filename}"
+  },
+  "unsaved_changes": {
+    "title": "저장하지 않은 변경사항",
+    "message": "저장하지 않은 변경사항이 있습니다.\n저장하시겠습니까?",
+    "yes": "예",
+    "no": "아니요",
+    "cancel": "취소"
+  },
+  "errors": {
+    "input_required": "을(를) 입력해주세요.",
+    "duplicate": "출력 문자 또는 모스부호가 중복됩니다.",
+    "duplicate_morse": "⚠️ 중복되는 모스코드가 있습니다: ",
+    "select_macro": "편집할 메크로를 선택해주세요.",
+    "select_single_item": "한개의 목록만 선택해 주세요"
+  },
+  "messages": {
+    "macro_added": "새 메크로 추가됨",
+    "macro_edited": "메크로 편집 완료",
+    "macro_deleted": "메크로 삭제",
+    "macro_already_applied": "이미 적용된 메크로 - 확인만 수행",
+    "macro_preview_applied": "메크로 편집 미리보기 적용됨",
+    "macro_applied": "메크로 적용 완료",
+    "conversion_complete": "변환 완료",
+    "active_radio_selected": "활성화 라디오 버튼 선택",
+    "inactive_radio_selected": "비활성화 라디오 버튼 선택",
+    "delete_confirm": "선택된 {count}개의 메크로를 삭제하시겠습니까?",
+    "save_complete": "저장 완료",
+    "save_success": "파일이 성공적으로 저장되었습니다:",
+    "file_save_complete": "파일 저장 완료",
+    "settings_saved": "환경설정 저장됨",
+    "settings_cancelled": "환경설정 취소됨",
+    "file_new": "새 파일을 만들겠습니다",
+    "file_open": "파일을 열겠습니다",
+    "file_save": "파일을 저장하겠습니다",
+    "auto_connect_attempt": "자동연결 시도: 사용 가능한 포트를 자동으로 검색합니다"
+  },
+  "table": {
+    "number": "번호",
+    "screen_char": "화면",
+    "input_char": "문자",
+    "morse": "부호",
+    "output_char": "출력",
+    "language": "언어",
+    "status": "상태"
+  },
+  "status": {
+    "active": "활성화",
+    "inactive": "비활성화"
+  },
+  "connection": {
+    "connected": "상태: 연결됨",
+    "disconnected": "상태: 연결되지 않음"
+  },
+  "app_title": "MORSEKEY 메크로 편집기",
+  "main_label": "메크로 편집기 v1.0",
+  "macro_list": {
+    "title": "메크로 목록",
+    "status_display": "상태: 메크로 목록이 표시됩니다"
+  },
+  "device_connection": {
+    "title": "장치 연결",
+    "port": "포트:",
+    "speed": "속도:",
+    "connect_attempt": "장치 연결 시도: 포트={port}, 속도={speed}"
+  },
+  "info": {
+    "title": "정보",
+    "warning": "경고",
+    "error": "오류",
+    "success": "성공",
+    "show_buttons": "버튼 표시",
+    "hide_buttons": "버튼 숨김"
+  },
+  "upload": {
+    "waiting": "업로드: 대기중",
+    "progress": "업로드: 진행중...",
+    "complete": "업로드: 완료"
+  },
+  "macro_status": {
+    "none_selected": "상태: 선택된 메크로가 없습니다",
+    "all_selected": "상태: 모든 메크로가 선택됨",
+    "partial_selected": "상태: {count}개 메크로 선택됨 (전체 {total}개)"
+  },
+  "placeholders": {
+    "screen_char": "화면에 표시될 문자를 입력하세요",
+    "output_char": "출력할 문자를 입력하세요",
+    "input_char": "변환할 문자를 입력하세요",
+    "morse_pattern": "모스부호 패턴을 입력하세요",
+    "morse_auto": "모스부호가 자동으로 표시됩니다",
+    "search": "메크로 검색..."
+  },
+  "search": {
+    "label": "검색:",
+    "placeholder": "화면/문자/부호/출력 검색 (예: s a c - 하나라도 포함된 항목 표시)",
+    "screen": "화면",
+    "input_char": "문자",
+    "morse": "부호",
+    "output_char": "출력"
+  },
+  "key_info": {
+    "title": "MORSEKEY 입력 키",
+    "window_title": "MORSEKEY 입력 키",
+    "description": "SYNS     : 모스부호 언어 설정 스위치\nMACRO    : 자동 문장 입력 스위치\nAT-S     : 자동 스페이스 입력 스위치\n점·선 동시 입력 : 엔터키 입력"
+  },
+  "morse_info": {
+    "title": "모스코드 패턴",
+    "window_title": "모스코드 패턴",
+    "description": "CAPS LOCK 상태에 따라 대문자와 소문자가 구분됩니다."
+  },
+  "morse_pages": {
+    "english": "영어 알파벳",
+    "korean": "한글 자음/모음",
+    "numbers": "숫자",
+    "special": "특수문자"
+  },
+  "upload_info": {
+    "title": "MACRO 업로드 방법",
+    "window_title": "MACRO 업로드 방법",
+    "description": "1. 리셋 버튼을 눌러주세요.\n2. 리셋을 누른 후, KEY-1과 KEY-3을 동시에 눌러주세요.\n3. 잠시 후, 윈도우에서 편집 모드로 자동 접속됩니다.\n4. MACRO 파일 업로드 후 리셋 버튼을 누르면 변경 내용이 적용됩니다."
+  },
+  "labels": {
+    "reset_button": "리셋 버튼",
+    "key_buttons": "KEY-1, KEY-3 버튼"
+  },
+  "messages": {
+    "image_not_found": "이미지 파일을 찾을 수 없습니다.",
+    "image_load_failed": "이미지를 로드할 수 없습니다.",
+    "image_load_error": "이미지 로드 오류: {error}"
+  },
+  "about": {
+    "title": "정보",
+    "program": "MORSEKEY 매크로 편집기 v1.0.0",
+    "version": "",
+    "author": "이 프로그램은 Airmodeling이 제작한 MORSEKEY-A01 장치용 매크로 편집 및 관리 프로그램입니다.",
+    "description": "Windows용 애플리케이션으로, JSON 기반의 간단한 매크로 편집과 미리보기 기능을 제공합니다.",
+    "usage_title": "사용 방법",
+    "usage_text": "편집이 완료된 macro.json 파일은 MORSEKEY-A01을 부트 모드로 연결한 뒤,\n장치의 파일 경로에 업로드하면 적용됩니다.",
+    "purpose_title": "",
+    "purpose_text": "",
+    "license_title": "라이선스",
+    "license_text": "이 프로그램은 개인 및 교육 목적으로 자유롭게 사용할 수 있습니다.\n단, 수정·재배포·상업적 이용은 금지되며, 사용에 따른 모든 책임은 사용자에게 있습니다.",
+    "requirements_title": "시스템 요구사항",
+    "requirements_text": "운영체제: Windows 10 이상\n장치: MORSEKEY-A01\nPython 3.10 이상 (스크립트 기능 사용 시 필요)",
+    "contact_title": "문의",
+    "contact_text": "이메일: airmodel00@gmail.com\n유튜브: AIRMODELING 채널\n© 2025 Airmodeling. All rights reserved."
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "macros": {
+    "EN": {
+      "--......--": {
+        "display": "73",
+        "input_char": "",
+        "input": "Best regards",
+        "number": 1,
+        "active": true
+      },
+      "---..---..": {
+        "display": "88",
+        "input_char": "",
+        "input": "i love",
+        "number": 2,
+        "active": true
+      },
+      "-.-.--.--.-.--.-": {
+        "display": "CQ CQ",
+        "input_char": "",
+        "input": "Anyone out there?",
+        "number": 3,
+        "active": true
+      },
+      "-...": {
+        "display": "DE",
+        "input_char": "",
+        "input": "this is",
+        "number": 4,
+        "active": true
+      },
+      "--..-": {
+        "display": "GA",
+        "input_char": "",
+        "input": "Good afternoon",
+        "number": 5,
+        "active": true
+      },
+      "--.--.": {
+        "display": "GG",
+        "input_char": "",
+        "input": "Good game",
+        "number": 6,
+        "active": true
+      },
+      "--......-": {
+        "display": "GIV",
+        "input_char": "",
+        "input": "Give",
+        "number": 7,
+        "active": true
+      },
+      "--.--": {
+        "display": "GM",
+        "input_char": "",
+        "input": "Good morning",
+        "number": 8,
+        "active": true
+      },
+      "--.-.": {
+        "display": "GN",
+        "input_char": "",
+        "input": "Good night",
+        "number": 9,
+        "active": true
+      },
+      "......": {
+        "display": "Hi",
+        "input_char": "",
+        "input": "Hi",
+        "number": 10,
+        "active": true
+      },
+      "-.-": {
+        "display": "K",
+        "input_char": "",
+        "input": "over",
+        "number": 11,
+        "active": true
+      },
+      "--...--.": {
+        "display": "MSG",
+        "input_char": "",
+        "input": "Message",
+        "number": 12,
+        "active": true
+      },
+      "-----.--": {
+        "display": "OMW",
+        "input_char": "",
+        "input": "On my way",
+        "number": 13,
+        "active": true
+      },
+      ".--..-.....": {
+        "display": "PLS",
+        "input_char": "",
+        "input": "Please",
+        "number": 14,
+        "active": true
+      },
+      ".--.....": {
+        "display": "PSE",
+        "input_char": "",
+        "input": "Please wait",
+        "number": 15,
+        "active": true
+      },
+      ".-.": {
+        "display": "R",
+        "input_char": "",
+        "input": "Received",
+        "number": 16,
+        "active": true
+      },
+      "--.-.-": {
+        "display": "TNK",
+        "input_char": "",
+        "input": "Thanks",
+        "number": 17,
+        "active": true
+      }
+    },
+    "KR": {
+      "--......--": {
+        "display": "73",
+        "input_char": "",
+        "input": "좋은 하루",
+        "number": 18,
+        "active": true
+      },
+      "---..---..": {
+        "display": "88",
+        "input_char": "",
+        "input": "사랑해요",
+        "number": 19,
+        "active": true
+      },
+      ".----...--": {
+        "display": "BT",
+        "input_char": "",
+        "input": "부탁",
+        "number": 20,
+        "active": true
+      },
+      "-.-.--.--.-.--.-": {
+        "display": "CQ CQ",
+        "input_char": "",
+        "input": "아무나 있나요?",
+        "number": 21,
+        "active": true
+      },
+      "-...": {
+        "display": "DE",
+        "input_char": "",
+        "input": "여기는",
+        "number": 22,
+        "active": true
+      },
+      "--..-": {
+        "display": "GA",
+        "input_char": "",
+        "input": "안녕하세요",
+        "number": 23,
+        "active": true
+      },
+      "--.--.": {
+        "display": "GG",
+        "input_char": "",
+        "input": "수고했어요",
+        "number": 24,
+        "active": true
+      },
+      "--.--": {
+        "display": "GM",
+        "input_char": "",
+        "input": "좋은아침",
+        "number": 25,
+        "active": true
+      },
+      "--.-.": {
+        "display": "GN",
+        "input_char": "",
+        "input": "잘자요",
+        "number": 26,
+        "active": true
+      },
+      ".---..-.-...": {
+        "display": "HND",
+        "input_char": "",
+        "input": "합니다",
+        "number": 27,
+        "active": true
+      },
+      "......": {
+        "display": "Hi",
+        "input_char": "",
+        "input": "안녕",
+        "number": 28,
+        "active": true
+      },
+      "-.-.-..": {
+        "display": "IG",
+        "input_char": "",
+        "input": "이거",
+        "number": 29,
+        "active": true
+      },
+      ".---...-.--": {
+        "display": "JSY",
+        "input_char": "",
+        "input": "주세요",
+        "number": 30,
+        "active": true
+      },
+      "-.-": {
+        "display": "K",
+        "input_char": "",
+        "input": "입니다",
+        "number": 31,
+        "active": true
+      },
+      ".-...--.--": {
+        "display": "KGM",
+        "input_char": "",
+        "input": "가지마",
+        "number": 32,
+        "active": true
+      },
+      ".---.-..": {
+        "display": "KOR",
+        "input_char": "",
+        "input": "한국",
+        "number": 33,
+        "active": true
+      },
+      "--...--.": {
+        "display": "MSG",
+        "input_char": "",
+        "input": "메시지",
+        "number": 34,
+        "active": true
+      },
+      ".--.....": {
+        "display": "PSE",
+        "input_char": "",
+        "input": "잠시만요",
+        "number": 35,
+        "active": true
+      },
+      ".-.": {
+        "display": "R",
+        "input_char": "",
+        "input": "받았어요",
+        "number": 36,
+        "active": true
+      },
+      "--.-.-": {
+        "display": "TNK",
+        "input_char": "",
+        "input": "감사합니다",
+        "number": 37,
+        "active": true
+      }
+    },
+    "BOTH": {
+      ".-...-.": {
+        "display": "Airmodeling",
+        "input_char": "AIR",
+        "input": "Airmodeling",
+        "number": 38,
+        "active": true
+      },
+      ".---.--.-.": {
+        "display": "JPN",
+        "input_char": "JPN",
+        "input": "Japan",
+        "number": 39,
+        "active": true
+      },
+      "-.----.-.": {
+        "display": "KOR",
+        "input_char": "KOR",
+        "input": "Korea",
+        "number": 40,
+        "active": true
+      },
+      "...---...": {
+        "display": "SOS",
+        "input_char": "SOS",
+        "input": "SOS",
+        "number": 41,
+        "active": true
+      }
+    }
+  },
+  "settings": {
+    "macro_length": 10,
+    "single_char_limit": 4,
+    "macro_timeout": 2.0
+  }
+}

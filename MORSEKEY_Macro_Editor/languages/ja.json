@@ -1,0 +1,228 @@
+{
+  "menu": {
+    "file": "ファイル",
+    "edit": "編集",
+    "settings": "設定",
+    "help": "ヘルプ",
+    "info": "情報"
+  },
+  "file_menu": {
+    "new": "新規作成",
+    "open": "開く",
+    "save": "保存",
+    "save_as": "名前を付けて保存",
+    "exit": "終了"
+  },
+  "edit_menu": {
+    "undo": "元に戻す",
+    "redo": "やり直し",
+    "copy": "コピー",
+    "paste": "貼り付け"
+  },
+  "settings_menu": {
+    "device": "デバイス設定",
+    "macro": "マクロ設定",
+    "preferences": "環境設定",
+    "sort_macros": "リスト並び替え"
+  },
+  "info_menu": {
+    "about": "情報",
+    "key_info": "MORSEKEY入力キー",
+    "upload_method": "アップロード方法",
+    "morse_pattern": "モールス符号パターン"
+  },
+  "about": {
+    "title": "情報",
+    "program": "MORSEKEY マクロエディター v1.0.0",
+    "version": "",
+    "author": "このプログラムは、Airmodelingが開発したMORSEKEY-A01デバイス用のマクロ編集・管理プログラムです。",
+    "description": "JSONベースのシンプルなマクロ編集とプレビュー機能を提供するWindowsアプリケーションです。",
+    "usage_title": "使用方法",
+    "usage_text": "編集が完了したmacro.jsonファイルは、MORSEKEY-A01をブートモードで接続した後、\nデバイスのファイルパスにアップロードすると適用されます。",
+    "purpose_title": "",
+    "purpose_text": "",
+    "license_title": "ライセンス",
+    "license_text": "このプログラムは個人および教育目的で自由に使用できます。\nただし、修正・再配布・商用利用は禁止されており、使用に伴うすべての責任はユーザーにあります。",
+    "requirements_title": "システム要件",
+    "requirements_text": "OS: Windows 10以上\nデバイス: MORSEKEY-A01\nPython 3.10以上 (スクリプト機能使用時に必要)",
+    "contact_title": "お問い合わせ",
+    "contact_text": "メール: airmodel00@gmail.com\nYouTube: AIRMODELINGチャンネル\n© 2025 Airmodeling. All rights reserved."
+  },
+  "buttons": {
+    "new_macro": "新規マクロ",
+    "edit": "編集",
+    "delete": "削除",
+    "save": "保存",
+    "load": "読み込み",
+    "upload": "アップロード",
+    "connect": "接続",
+    "auto_connect": "自動接続",
+    "apply": "適用",
+    "confirm": "確認",
+    "cancel": "キャンセル",
+    "convert": "変換"
+  },
+  "macro_dialog": {
+    "title_new": "新規マクロ設定",
+    "title_edit": "マクロ編集",
+    "screen_char": "画面文字",
+    "language_mode": "言語モード",
+    "morse_pattern": "モールスパターン",
+    "output_char": "出力文字",
+    "input_char": "入力文字",
+    "morse_code": "モールス符号",
+    "placeholder_screen": "新しい文字",
+    "placeholder_output": "新しい文字",
+    "placeholder_input": "新しい文字",
+    "placeholder_morse": "モールス符号が自動で表示されます",
+    "info_oled": "※ OLED出力用（英語入力のみ）",
+    "info_keyboard": "※ 実際のキーボード入力文字"
+  },
+  "settings": {
+    "title": "環境設定",
+    "language": "環境言語",
+    "language_label": "言語選択",
+    "path_display": "保存パス指定",
+    "auto_load": "自動読み込み",
+    "apply": "適用",
+    "confirm": "確認",
+    "cancel": "キャンセル",
+    "default": "デフォルト",
+    "yes": "はい",
+    "no": "いいえ",
+    "restart_title": "プログラム再起動",
+    "restart_message": "言語設定が変更されました。\nプログラムを再起動しますか？"
+  },
+  "file_info": {
+    "no_file": "現在のファイル: なし",
+    "current_file": "現在のファイル: {filename}"
+  },
+  "unsaved_changes": {
+    "title": "保存されていない変更",
+    "message": "保存されていない変更があります。\n保存しますか？",
+    "yes": "はい",
+    "no": "いいえ",
+    "cancel": "キャンセル"
+  },
+  "errors": {
+    "input_required": "を入力してください。",
+    "duplicate": "出力文字またはモールス符号が重複しています。",
+    "duplicate_morse": "⚠️ 重複するモールス符号があります: ",
+    "select_macro": "編集するマクロを選択してください。",
+    "select_single_item": "1つの項目のみ選択してください"
+  },
+  "messages": {
+    "macro_added": "新規マクロ追加",
+    "macro_edited": "マクロ編集完了",
+    "macro_deleted": "マクロ削除",
+    "macro_already_applied": "既に適用済みマクロ - 確認のみ実行",
+    "macro_preview_applied": "マクロ編集プレビュー適用",
+    "macro_applied": "マクロ適用完了",
+    "conversion_complete": "変換完了",
+    "active_radio_selected": "有効ラジオボタン選択",
+    "inactive_radio_selected": "無効ラジオボタン選択",
+    "delete_confirm": "選択された{count}個のマクロを削除しますか？",
+    "save_complete": "保存完了",
+    "save_success": "ファイルが正常に保存されました:",
+    "file_save_complete": "ファイル保存完了",
+    "settings_saved": "環境設定保存",
+    "settings_cancelled": "環境設定キャンセル",
+    "file_new": "新規ファイル作成",
+    "file_open": "ファイルを開く",
+    "file_save": "ファイルを保存",
+    "auto_connect_attempt": "自動接続試行: 利用可能なポートを自動検索中"
+  },
+  "table": {
+    "number": "番号",
+    "screen_char": "画面",
+    "input_char": "入力",
+    "morse": "モールス",
+    "output_char": "出力",
+    "language": "言語",
+    "status": "状態"
+  },
+  "status": {
+    "active": "有効",
+    "inactive": "無効"
+  },
+  "connection": {
+    "connected": "状態: 接続済み",
+    "disconnected": "状態: 未接続"
+  },
+  "app_title": "MORSEKEY マクロエディター",
+  "main_label": "マクロエディター v1.0",
+  "macro_list": {
+    "title": "マクロリスト",
+    "status_display": "状態: マクロリストが表示されています"
+  },
+  "device_connection": {
+    "title": "デバイス接続",
+    "port": "ポート:",
+    "speed": "速度:",
+    "connect_attempt": "デバイス接続試行: ポート={port}, 速度={speed}"
+  },
+  "info": {
+    "title": "情報",
+    "warning": "警告",
+    "error": "エラー",
+    "success": "成功",
+    "show_buttons": "ボタン表示",
+    "hide_buttons": "ボタン非表示"
+  },
+  "upload": {
+    "waiting": "アップロード: 待機中",
+    "progress": "アップロード: 進行中...",
+    "complete": "アップロード: 完了"
+  },
+  "macro_status": {
+    "none_selected": "ステータス: 選択されたマクロがありません",
+    "all_selected": "ステータス: すべてのマクロが選択されました",
+    "partial_selected": "ステータス: {count}個のマクロが選択されました (合計 {total}個)"
+  },
+  "placeholders": {
+    "screen_char": "画面に表示する文字を入力してください",
+    "output_char": "出力する文字を入力してください",
+    "input_char": "変換する文字を入力してください",
+    "morse_pattern": "モールスパターンを入力してください",
+    "morse_auto": "モールスコードが自動的に表示されます",
+    "search": "マクロ検索..."
+  },
+  "search": {
+    "label": "検索:",
+    "placeholder": "画面/入力/モールス/出力検索 (例: s a c - いずれかを含む項目を表示)",
+    "screen": "画面",
+    "input_char": "入力",
+    "morse": "モールス",
+    "output_char": "出力"
+  },
+  "key_info": {
+    "title": "MORSEKEY入力キー",
+    "window_title": "MORSEKEY入力キー",
+    "description": "SYNS     : モールス符号言語設定スイッチ\nMACRO    : 自動文章入力スイッチ\nAT-S     : 自動スペース入力スイッチ\n点・線同時入力 : エンターキー入力"
+  },
+  "morse_info": {
+    "title": "モールス符号パターン",
+    "window_title": "モールス符号パターン",
+    "description": "CAPS LOCK状態に応じて大文字と小文字が区別されます。"
+  },
+  "morse_pages": {
+    "english": "英語アルファベット",
+    "korean": "韓国語子音/母音",
+    "numbers": "数字",
+    "special": "特殊文字"
+  },
+  "upload_info": {
+    "title": "MACROアップロード方法",
+    "window_title": "MACROアップロード方法",
+    "description": "1. リセットボタンを押してください。\n2. リセットを押した後、KEY-1とKEY-3を同時に押してください。\n3. しばらくすると、Windowsで編集モードに自動接続されます。\n4. MACROファイルをアップロードした後、リセットボタンを押すと変更内容が適用されます。"
+  },
+  "labels": {
+    "reset_button": "リセットボタン",
+    "key_buttons": "KEY-1, KEY-3ボタン"
+  },
+  "messages": {
+    "image_not_found": "画像ファイルが見つかりません。",
+    "image_load_failed": "画像を読み込めません。",
+    "image_load_error": "画像読み込みエラー: {error}"
+  }
+}
