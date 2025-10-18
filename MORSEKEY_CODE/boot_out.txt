@@ -1,0 +1,7 @@
+Adafruit CircuitPython 9.2.8 on 2025-05-28; Raspberry Pi Pico with rp2040
+Board ID:raspberry_pi_pico
+UID:503558607A67271F
+boot.py output:
+Traceback (most recent call last):
+  File "boot.py", line 42, in <module>
+TypeError: unexpected keyword argument 'product_name'
