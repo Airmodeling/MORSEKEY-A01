@@ -61,11 +61,9 @@ PCB 거버 파일, 3D 모델링 데이터, 펌웨어 코드 등 제작에 필요
 
 위 이미지는 MORSEKEY-A01의 **전자회로 구성도**입니다.
 
-## PCB Gerber Preview
+## PCB 거버 데이터
 
-![Top Layer](https://github.com/user-attachments/assets/557ed057-f22c-4755-a002-7f42a241c9fd)
-![Bottom Layer](https://github.com/user-attachments/assets/32eca26a-5469-4382-81d3-695b1cd3f4ba)
-
+<img width="905" height="603" alt="Image" src="https://github.com/user-attachments/assets/f4d712bb-9f99-4b6d-9a03-e058c2233920" />
 
 ---
 
@@ -207,6 +205,10 @@ Assembly manuals are provided in **Korean and English**.
 <img width="800" alt="MORSEKEY-A01 Circuit" src="https://github.com/user-attachments/assets/f4f3a235-8828-4c03-8761-ed286f14b208" />
 
 The image above shows the electronic circuit diagram of the MORSEKEY-A01.
+
+## PCB Gerber Preview
+
+<img width="905" height="603" alt="Image" src="https://github.com/user-attachments/assets/f4d712bb-9f99-4b6d-9a03-e058c2233920" />
 
 ---
 
