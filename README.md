@@ -208,7 +208,7 @@ The image above shows the electronic circuit diagram of the MORSEKEY-A01.
 
 ## PCB Gerber Preview
 
-<img width="1169" height="827" alt="Image" src="https://github.com/user-attachments/assets/33996fed-99c0-443b-923f-121ea926a1dc" />
+<img width="800" alt="Image" src="https://github.com/user-attachments/assets/33996fed-99c0-443b-923f-121ea926a1dc" />
 
 ---
 
