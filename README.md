@@ -55,7 +55,7 @@ PCB 거버 파일, 3D 모델링 데이터, 펌웨어 코드 등 제작에 필요
 
 <img width="800" alt="MORSEKEY-A01 Circuit" src="https://github.com/user-attachments/assets/f4f3a235-8828-4c03-8761-ed286f14b208" />
 
-위 이미지는 MORSEKEY-A01의 **검증 완료된 전자회로 구성도**입니다.
+위 이미지는 MORSEKEY-A01의 **전자회로 구성도**입니다.
 
 ---
 
@@ -185,6 +185,13 @@ Assembly manuals are provided in **Korean and English**.
 
 - **Save and Restore Settings**  
   User-defined configurations (WPM, IWG, sound, etc.) are stored and reloaded after reboot.
+
+---
+
+Circuit Diagram
+<img width="800" alt="MORSEKEY-A01 Circuit" src="https://github.com/user-attachments/assets/f4f3a235-8828-4c03-8761-ed286f14b208" />
+
+The image above shows the electronic circuit diagram of the MORSEKEY-A01.
 
 ---
 
