@@ -1,5 +1,8 @@
 # [KOR] MORSEKEY-A01 프로젝트 개요
 
+**프로젝트 소개 영상**  
+[![MORSEKEY-A01 Video](https://img.youtube.com/vi/JlrWVxrsSqo/0.jpg)](https://www.youtube.com/shorts/JlrWVxrsSqo)
+
 **MORSEKEY-A01**은 **RP2040-Zero** 보드를 기반으로 제작된 **모스부호 키보드 입력 장치**입니다.  
 듀얼 키(또는 듀얼 패드) 방식으로 동작하며, 사용자가 점(dot)과 선(dash)을 입력하면 해당 패턴에 맞는 문자가 자동으로 변환되어 입력됩니다.  
 
