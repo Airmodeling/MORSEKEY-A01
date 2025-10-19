@@ -63,7 +63,7 @@ PCB 거버 파일, 3D 모델링 데이터, 펌웨어 코드 등 제작에 필요
 
 ## PCB 거버 데이터
 
-<img width="905" height="603" alt="Image" src="https://github.com/user-attachments/assets/f4d712bb-9f99-4b6d-9a03-e058c2233920" />
+<img width="1169" height="827" alt="Image" src="https://github.com/user-attachments/assets/33996fed-99c0-443b-923f-121ea926a1dc" />
 
 ---
 
@@ -208,7 +208,7 @@ The image above shows the electronic circuit diagram of the MORSEKEY-A01.
 
 ## PCB Gerber Preview
 
-<img width="905" height="603" alt="Image" src="https://github.com/user-attachments/assets/f4d712bb-9f99-4b6d-9a03-e058c2233920" />
+<img width="1169" height="827" alt="Image" src="https://github.com/user-attachments/assets/33996fed-99c0-443b-923f-121ea926a1dc" />
 
 ---
 
