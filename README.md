@@ -188,7 +188,8 @@ Assembly manuals are provided in **Korean and English**.
 
 ---
 
-Circuit Diagram
+## Circuit Diagram
+
 <img width="800" alt="MORSEKEY-A01 Circuit" src="https://github.com/user-attachments/assets/f4f3a235-8828-4c03-8761-ed286f14b208" />
 
 The image above shows the electronic circuit diagram of the MORSEKEY-A01.
