@@ -61,6 +61,12 @@ PCB 거버 파일, 3D 모델링 데이터, 펌웨어 코드 등 제작에 필요
 
 위 이미지는 MORSEKEY-A01의 **전자회로 구성도**입니다.
 
+## PCB Gerber Preview
+
+![Top Layer](https://github.com/user-attachments/assets/557ed057-f22c-4755-a002-7f42a241c9fd)
+![Bottom Layer](https://github.com/user-attachments/assets/32eca26a-5469-4382-81d3-695b1cd3f4ba)
+
+
 ---
 
 ## 옵션 메뉴 설명
