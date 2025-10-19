@@ -2,6 +2,7 @@
 
 **프로젝트 소개 영상:**
 https://www.youtube.com/shorts/JlrWVxrsSqo
+<img width="500" alt="MORSEKEY-A01 Real Photo" src="https://github.com/user-attachments/assets/2dfefea7-2b9a-453e-9288-0095c97f78bc" />
 
 
 **MORSEKEY-A01**은 **RP2040-Zero** 보드를 기반으로 제작된 **모스부호 키보드 입력 장치**입니다.  
