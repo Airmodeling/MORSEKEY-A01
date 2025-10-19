@@ -63,7 +63,7 @@ PCB 거버 파일, 3D 모델링 데이터, 펌웨어 코드 등 제작에 필요
 
 ## PCB 거버 데이터
 
-<img width="1169" height="827" alt="Image" src="https://github.com/user-attachments/assets/33996fed-99c0-443b-923f-121ea926a1dc" />
+<img width="800" alt="Image" src="https://github.com/user-attachments/assets/33996fed-99c0-443b-923f-121ea926a1dc" />
 
 ---
 
