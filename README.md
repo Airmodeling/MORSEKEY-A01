@@ -74,6 +74,16 @@ https://oshwlab.com/kimgx05/morsekey-a01
 🔗 **GitHub (소스코드 및 펌웨어)**  
 https://github.com/Airmodeling/MORSEKEY-A01  
 
+### DESIGN_FILES.zip 구성 안내
+
+`DESIGN_FILES.zip` 압축 파일에는 다음 세 개의 폴더가 포함되어 있습니다.
+
+- **DWG** – 2D 도면 (레이저 커팅 또는 기계 가공용)  
+- **GERBER** – PCB 제작용 거버 데이터  
+- **STL** – 3D 프린팅용 모델 데이터  
+
+해당 자료는 실제 출력(3D 프린팅) 또는 가공(CNC, 레이저 컷팅 등)에 바로 사용할 수 있습니다.
+
 ### 프로그램 구성
 - **MORSEKEY_CODE** – 메인 프로그램 코드 (CircuitPython)  
 - **MORSEKEY_Macro_Editor** – 매크로 파일 편집용 PC 프로그램  
@@ -192,6 +202,16 @@ https://oshwlab.com/kimgx05/morsekey-a01
 
 🔗 **GitHub (Source & Firmware)**  
 https://github.com/Airmodeling/MORSEKEY-A01  
+
+### DESIGN_FILES.zip Structure
+
+The `DESIGN_FILES.zip` package contains three folders:
+
+- **DWG** – 2D drawings for laser cutting or machining  
+- **GERBER** – PCB manufacturing data  
+- **STL** – 3D printing models  
+
+These files can be directly used for fabrication or 3D printing.
 
 ### File Structure
 - **MORSEKEY_CODE** – Main program (CircuitPython)  
