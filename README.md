@@ -51,6 +51,14 @@ PCB 거버 파일, 3D 모델링 데이터, 펌웨어 코드 등 제작에 필요
 
 ---
 
+## 회로 구성도 (Circuit Diagram)
+
+<img width="800" alt="MORSEKEY-A01 Circuit" src="https://github.com/user-attachments/assets/f4f3a235-8828-4c03-8761-ed286f14b208" />
+
+위 이미지는 MORSEKEY-A01의 **검증 완료된 전자회로 구성도**입니다.
+
+---
+
 ## 옵션 메뉴 설명
 
 | 항목 | 기능 |
